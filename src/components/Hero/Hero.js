@@ -1,15 +1,21 @@
-import React from 'react';
+import React from "react";
+import useDownloader from "react-use-downloader";
 
 import {
   Section,
   SectionText,
   SectionTitle,
-} from '../../styles/GlobalComponents';
-import Button from '../../styles/GlobalComponents/Button';
-import { LeftSection } from './HeroStyles';
-import Link from 'next/link';
+} from "../../styles/GlobalComponents";
+import Button from "../../styles/GlobalComponents/Button";
+import { LeftSection } from "./HeroStyles";
+import Link from "next/link";
 
-const Hero = props => {
+const Hero = (props) => {
+  const { download } = useDownloader();
+  const downloadCV = {
+    fileUrl: "/download/CV_Medovnik_Front End Developer.pdf",
+    fileName: "CV_Medovnik_Front End Developer.pdf",
+  };
   return (
     <Section row nopadding>
       <LeftSection>
@@ -20,14 +26,14 @@ const Hero = props => {
           I develop websites that empower your identity and ignite your business
         </SectionText>
         <Button>
-          <Link href="https://drive.google.com/file/d/1SUcUtqrZdgfnxU7MJ2AZ1F_oRs1Bmmkh/view?usp=sharing">
+          <Link href="">
             <a
+              onClick={() => download(downloadCV.fileUrl, downloadCV.fileName)}
               style={{
-                color: 'white',
+                color: "white",
               }}
-              target="_blank"
             >
-              Learn More
+              Download CV
             </a>
           </Link>
         </Button>
