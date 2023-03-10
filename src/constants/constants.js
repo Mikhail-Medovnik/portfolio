@@ -16,7 +16,7 @@ export const projects = [
     image: "/images/recipes.png",
     tags: ["React", "React Routing", "JavaScript", "Rest API"],
     source: "https://github.com/gitMike23/Recipe-app__react",
-    visit: "https://medovnik-recipes.netlify.app/",
+    visit: "https://frolicking-phoenix-abcebd.netlify.app/",
     id: 1,
   },
   {
