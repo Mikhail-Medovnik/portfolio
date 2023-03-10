@@ -13,8 +13,8 @@ import Link from "next/link";
 const Hero = (props) => {
   const { download } = useDownloader();
   const downloadCV = {
-    fileUrl: "/download/CV_Medovnik_Front End Developer.pdf",
-    fileName: "CV_Medovnik_Front End Developer.pdf",
+    fileUrl: "/download/Mikhail_Medovnik_Frontend_Developer_CV.pdf",
+    fileName: "Mikhail_Medovnik_Frontend_Developer_CV.pdf",
   };
   return (
     <Section row nopadding>
