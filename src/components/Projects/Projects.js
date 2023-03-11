@@ -37,7 +37,7 @@ const Projects = () => {
               </ImgWrapper>
 
               <TitleContent>
-                <HeaderThree title={title}></HeaderThree>
+                <HeaderThree>{title}</HeaderThree>
                 <Hr />
               </TitleContent>
               <CardInfo>{description}</CardInfo>
