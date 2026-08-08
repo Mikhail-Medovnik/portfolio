@@ -1,3 +1,7 @@
+"use client";
+
+import Hero from "@/src/components/Hero/Hero";
+
 export default function Home() {
-  return <p>Portfolio migration in progress.</p>;
+  return <Hero />;
 }

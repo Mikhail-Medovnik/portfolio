@@ -1,4 +1,14 @@
-export const projects = [
+export interface IProject {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  source: string;
+  visit: string;
+}
+
+export const projects: IProject[] = [
   {
     title: "Real Estate Searcher App",
     description:
@@ -39,7 +49,6 @@ export const projects = [
     visit: "https://medovnik-palette.netlify.app/",
     id: 3,
   },
-
   {
     title: "Photon",
     description:
@@ -50,7 +59,6 @@ export const projects = [
     visit: "https://medovnik-photon.netlify.app/",
     id: 4,
   },
-
   {
     title: "Calculator",
     description:
@@ -63,7 +71,12 @@ export const projects = [
   },
 ];
 
-export const TimeLineData = [
+export interface ITimelineEntry {
+  year: number;
+  text: string;
+}
+
+export const TimeLineData: ITimelineEntry[] = [
   { year: 2019, text: "Started my journey as frontend developer" },
   {
     year: 2020,
@@ -76,7 +89,14 @@ export const TimeLineData = [
   },
 ];
 
-export const privateData = {
+export interface IPrivateData {
+  linkedIn: string;
+  github: string;
+  telegram: string;
+  email: string;
+}
+
+export const privateData: IPrivateData = {
   linkedIn: "https://www.linkedin.com/in/mikhail-medovnik/",
   github: "https://github.com/gitmike23",
   telegram: "https://t.me/medovnik",
