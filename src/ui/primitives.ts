@@ -14,6 +14,9 @@ export const Section = styled.section<{
   position: relative;
   overflow: hidden;
   grid-template-columns: 1fr 1fr;
+  /* Clears the sticky header (~62px tall at this breakpoint, plus buffer)
+     so anchor-scroll targets (#projects/#tech/#about) don't land underneath it. */
+  scroll-margin-top: 90px;
 
   @media ${(props) => props.theme.breakpoints.md} {
     padding: 24px 48px 0;
@@ -24,10 +27,13 @@ export const Section = styled.section<{
     padding: ${(props) => (props.$nopadding ? "0" : "16px 16px 0")};
     width: calc(100vw - 32px);
     flex-direction: column;
+    /* The header switches to a two-row 60px/60px layout at this breakpoint
+       (~150px tall including its padding), so it needs a larger offset. */
+    scroll-margin-top: 170px;
   }
 `;
 
-export const SectionTitle = styled.h2<{ $main?: boolean }>`
+export const SectionTitle = styled.h2<{ $main?: boolean; as?: "h1" | "h2" }>`
   font-weight: 800;
   font-size: ${(props) => (props.$main ? "65px" : "56px")};
   line-height: ${(props) => (props.$main ? "72px" : "56px")};

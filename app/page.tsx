@@ -7,8 +7,7 @@ import Technologies from "@/src/components/Technologies/Technologies";
 import Timeline from "@/src/components/TimeLine/TimeLine";
 import { Section } from "@/src/ui/primitives";
 import { privateData } from "@/src/constants/constants";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
+import { siteUrl } from "@/lib/site";
 
 const personJsonLd = {
   "@context": "https://schema.org",

@@ -25,9 +25,9 @@ const TOTAL_CAROUSEL_COUNT = TimeLineData.length;
 
 const Timeline = () => {
   const [activeItem, setActiveItem] = useState(0);
-  const carouselRef = useRef<HTMLUListElement>(null);
+  const carouselRef = useRef<HTMLDivElement>(null);
 
-  const scroll = (node: HTMLUListElement, left: number) => {
+  const scroll = (node: HTMLDivElement, left: number) => {
     node.scrollTo({ left, behavior: "smooth" });
   };
 
@@ -49,7 +49,7 @@ const Timeline = () => {
           (carouselRef.current.scrollWidth * 0.7)) *
           TimeLineData.length
       );
-      setActiveItem(index);
+      setActiveItem(Math.max(0, Math.min(index, TimeLineData.length - 1)));
     }
   };
 

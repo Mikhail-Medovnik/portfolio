@@ -12,7 +12,7 @@ export const ImgWrapper = styled.div`
   overflow: hidden;
 `;
 
-export const GridContainer = styled.section`
+export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   grid-auto-rows: minmax(min-content, max-content);
@@ -77,7 +77,7 @@ export const CardInfo = styled.p`
   }
 `;
 
-export const UtilityList = styled.ul`
+export const UtilityList = styled.div`
   list-style-type: none;
   padding: 0;
   display: flex;

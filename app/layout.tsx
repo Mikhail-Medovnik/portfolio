@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Space_Grotesk } from "next/font/google";
 import StyledComponentsRegistry from "@/lib/registry";
+import { siteUrl } from "@/lib/site";
 import Header from "@/src/components/Header/Header";
 import Footer from "@/src/components/Footer/Footer";
 
@@ -11,7 +12,6 @@ const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com";
 const description =
   "Frontend developer portfolio — projects, technologies, and experience.";
 
@@ -22,6 +22,9 @@ export const metadata: Metadata = {
     template: "%s | Mikhail Medovnik",
   },
   description,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Mikhail Medovnik — Web Developer",
     description,

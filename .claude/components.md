@@ -12,8 +12,10 @@
 
 ## Server vs Client Components
 
-- Server Component by default (no directive).
-- Add `"use client"` only when the component uses hooks, refs, or browser-only APIs (event listeners, `window`, `document`, etc.). Example: `TimeLine.tsx` needs it for its carousel state and scroll handling; `Hero.tsx` does not.
+- Server Component by default **only for components with zero styled-components usage** — in this codebase, only `BackgroundAnimation` qualifies.
+- Every component whose own file directly renders a styled-components primitive (its own `styled.x`, an import from `src/ui/primitives.ts`, or `src/ui/Button.tsx`) needs `"use client"` at the top of that file. This is not optional and is not about hooks/refs/browser APIs — styled-components' theme access goes through React Context, and Context providers only resolve inside the client render tree. A Server Component that directly calls a themed styled-component executes during the RSC server pass with no provider active, so `props.theme` is `undefined` and the render throws (`TypeError: Cannot read properties of undefined (reading 'breakpoints')`). This was confirmed by an actual crash during Task 2 of the migration, not a theoretical concern.
+- `Hero.tsx` **does** need `"use client"` — it directly renders `Section`, `SectionText`, `SectionTitle`, and `Button`, all themed styled-components primitives.
+- `app/layout.tsx` is the one exception: it must stay a Server Component regardless of styled-components usage, because it exports `metadata` and Next.js disallows exporting `metadata`/`generateMetadata` from a `"use client"` file.
 
 ## Styled-components
 

@@ -37,6 +37,10 @@ export const Div1 = styled.div`
   }
 `;
 
+export const Nav = styled.nav`
+  display: contents;
+`;
+
 export const Div2 = styled.ul`
   grid-area: 1 / 2 / 2 / 4;
   display: flex;

@@ -10,6 +10,7 @@ import {
   Div2,
   Div3,
   LogoLink,
+  Nav,
   NavLink,
   Span,
 } from "./Header.styles";
@@ -22,17 +23,19 @@ const Header = () => (
         <Span>Portfolio</Span>
       </LogoLink>
     </Div1>
-    <Div2>
-      <li>
-        <NavLink href="#projects">Projects</NavLink>
-      </li>
-      <li>
-        <NavLink href="#tech">Technologies</NavLink>
-      </li>
-      <li>
-        <NavLink href="#about">About</NavLink>
-      </li>
-    </Div2>
+    <Nav>
+      <Div2>
+        <li>
+          <NavLink href="#projects">Projects</NavLink>
+        </li>
+        <li>
+          <NavLink href="#tech">Technologies</NavLink>
+        </li>
+        <li>
+          <NavLink href="#about">About</NavLink>
+        </li>
+      </Div2>
+    </Nav>
     <Div3>
       <SocialIcons
         href={privateData.github}

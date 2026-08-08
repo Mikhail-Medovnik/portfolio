@@ -7,7 +7,7 @@ import { LeftSection } from "./Hero.styles";
 const Hero = () => (
   <Section $row $nopadding>
     <LeftSection>
-      <SectionTitle $main>
+      <SectionTitle $main as="h1">
         Hi, I&apos;m Mikhail, and <br /> I&apos;m a web developer <br />
       </SectionTitle>
       <SectionText>
