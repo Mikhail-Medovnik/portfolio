@@ -1,6 +1,7 @@
 "use client";
 
-import { DiBootstrap, DiFirebase, DiReact } from "react-icons/di";
+import { DiNodejsSmall, DiReact } from "react-icons/di";
+import { TbComponents, TbSparkles } from "react-icons/tb";
 import {
   Section,
   SectionDivider,
@@ -20,44 +21,56 @@ const Technologies = () => (
     <SectionDivider />
     <SectionTitle style={{ marginTop: "2rem" }}>Technologies</SectionTitle>
     <SectionText>
-      I&apos;ve worked with a range of technologies in the web development
-      world.
+      Five years of production frontend work — here&apos;s the stack I
+      actually ship with.
     </SectionText>
     <List>
       <ListItem>
         <DiReact size="3rem" />
         <ListContainer>
-          <ListTitle>Front-end</ListTitle>
+          <ListTitle>Frontend Engineering</ListTitle>
           <ListParagraph>
-            More than 2 years of experience in modern Web Development <br />
-            using best practices and following technologies: <br />
-            Javascript, Rect.js, Next.js and Typescript.
+            5+ years building production React and Next.js applications in
+            strict TypeScript. Day to day: App Router, SSR/SSG, NX
+            monorepos and microfrontends, FSD architecture, and Canvas/SVG
+            work for high-load, animation-heavy interfaces.
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiBootstrap size="3rem" />
+        <TbComponents size="3rem" />
         <ListContainer>
-          <ListTitle>
-            Libraries <br /> and Features
-          </ListTitle>
+          <ListTitle>UI, State &amp; Testing</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            Redux, Redux Toolkit. Familiar with any styling approach (eg.
-            SCSS modules, MUI, Ant Design, Styled Component). On my current
-            production project I use Mantine.dev library. To test my code I
-            use JEST and React-testing-library.
+            Zustand and TanStack Query for state and data fetching.
+            SCSS/CSS Modules, Tailwind, Mantine and Framer Motion on the UI
+            layer, documented in Storybook. Everything ships with Jest and
+            React Testing Library coverage.
           </ListParagraph>
         </ListContainer>
       </ListItem>
       <ListItem>
-        <DiFirebase size="3rem" />
+        <DiNodejsSmall size="3rem" />
         <ListContainer>
-          <ListTitle>Back-end</ListTitle>
+          <ListTitle>Backend &amp; Platform</ListTitle>
           <ListParagraph>
-            Experience with <br />
-            Express.js, MongoDB and Firebase. Solid background in working
-            with Contentful CMS.
+            Node.js and Express services on PostgreSQL, REST and WebSocket
+            APIs, headless CMS integrations (Contentful, Directus) and S3
+            media pipelines. Plus GitLab CI/CD, Vite and Webpack builds,
+            i18n and A/B testing infrastructure.
+          </ListParagraph>
+        </ListContainer>
+      </ListItem>
+      <ListItem>
+        <TbSparkles size="3rem" />
+        <ListContainer>
+          <ListTitle>AI-Assisted Development</ListTitle>
+          <ListParagraph>
+            Cursor and Claude Code in daily use: custom agent rules and
+            project instructions, AI agents wired into real team
+            workflows, and CI/CD automation that opens GitLab merge
+            requests. Treated as tooling — review and tests still decide
+            what ships.
           </ListParagraph>
         </ListContainer>
       </ListItem>

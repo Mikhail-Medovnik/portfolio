@@ -68,21 +68,17 @@ const Timeline = () => {
     <Section id="about">
       <SectionTitle>About Me</SectionTitle>
       <SectionText>
-        As a frontend developer with over 2 years of experience, I have
-        honed my skills in Javascript, React JS, and Typescript to deliver
-        exceptional results. My passion for crafting seamless user
-        experiences drives me to constantly push the boundaries of what&apos;s
-        possible, while my attention to detail ensures that every project
-        is delivered to the highest standards. With a proven track record
-        of delivering high-quality work on time, I am confident in my
-        ability to exceed your expectations and drive success for your
-        team.
+        Senior Frontend Engineer with 5+ years in production, building
+        high-load interfaces in React, Next.js, and TypeScript for teams at
+        Align Technology and Stoloto. I care about clean architecture,
+        real test coverage, and shipping work that holds up under real
+        traffic — not just work that looks good in a demo.
       </SectionText>
 
       <CarouselContainer ref={carouselRef} onScroll={handleScroll}>
         {TimeLineData.map((item, index) => (
           <CarouselMobileScrollNode
-            key={item.year}
+            key={`${item.year}-${index}`}
             $final={index === TOTAL_CAROUSEL_COUNT - 1}
           >
             <CarouselItem
@@ -134,7 +130,7 @@ const Timeline = () => {
       <CarouselButtons>
         {TimeLineData.map((item, index) => (
           <CarouselButton
-            key={item.year}
+            key={`${item.year}-${index}`}
             $index={index}
             $active={activeItem}
             onClick={(e) => handleClick(e, index)}

@@ -8,16 +8,17 @@ const Hero = () => (
   <Section $row $nopadding>
     <LeftSection>
       <SectionTitle $main as="h1">
-        Hi, I&apos;m Mikhail, and <br /> I&apos;m a web developer <br />
+        Hi, I&apos;m Mikhail, and <br /> I&apos;m a senior frontend engineer{" "}
+        <br />
       </SectionTitle>
       <SectionText>
-        I develop websites that empower your identity and ignite your
-        business
+        I build high-load, production frontend applications with React,
+        Next.js, and TypeScript
       </SectionText>
       <Button>
         <a
-          href="/download/Mikhail_Medovnik_Frontend_Developer_CV.pdf"
-          download="Mikhail_Medovnik_Frontend_Developer_CV.pdf"
+          href="/download/Mikhail_Medovnik_Senior_Frontend_Engineer.pdf"
+          download="Mikhail_Medovnik_Senior_Frontend_Engineer.pdf"
           rel="noopener"
           style={{ color: "white" }}
         >

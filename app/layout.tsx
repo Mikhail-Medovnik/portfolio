@@ -13,12 +13,12 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 const description =
-  "Frontend developer portfolio — projects, technologies, and experience.";
+  "Senior Frontend Engineer portfolio — production React, Next.js, and TypeScript work, technologies, and experience.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Mikhail Medovnik — Web Developer",
+    default: "Mikhail Medovnik — Senior Frontend Engineer",
     template: "%s | Mikhail Medovnik",
   },
   description,
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Mikhail Medovnik — Web Developer",
+    title: "Mikhail Medovnik — Senior Frontend Engineer",
     description,
     url: siteUrl,
     siteName: "Mikhail Medovnik",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mikhail Medovnik — Web Developer",
+    title: "Mikhail Medovnik — Senior Frontend Engineer",
     description,
   },
 };

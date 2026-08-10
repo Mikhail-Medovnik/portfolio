@@ -43,3 +43,4 @@ CLAUDE.md
 /.claude
 /docs*
 /.superpowers
+/.playwright-mcp

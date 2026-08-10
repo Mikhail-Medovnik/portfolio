@@ -13,7 +13,7 @@ const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Mikhail Medovnik",
-  jobTitle: "Frontend Developer",
+  jobTitle: "Senior Frontend Engineer",
   url: siteUrl,
   sameAs: [privateData.github, privateData.linkedIn, privateData.telegram],
 };

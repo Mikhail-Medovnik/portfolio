@@ -1,14 +1,88 @@
+export type TProjectPlaceholder = "cms";
+
 export interface IProject {
   id: number;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  placeholder?: TProjectPlaceholder;
   tags: string[];
-  source: string;
-  visit: string;
+  source?: string;
+  visit?: string;
 }
 
 export const projects: IProject[] = [
+  {
+    title: "Stoloto Lottery Games",
+    description:
+      "Grid-based lottery games built from scratch to strict technical specs for one of Russia's largest gaming platforms. Includes a gesture-driven number selector in the spirit of Android's pattern lock, reused across 5+ game mechanics, and an animation layer tuned for high-load game fields with element freezing and store synchronization.",
+    image: "/images/stoloto.jpg",
+    visit: "https://www.stoloto.ru/",
+    tags: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "TanStack Query",
+      "Canvas & SVG",
+      "Lottie",
+      "requestAnimationFrame",
+    ],
+    id: 0,
+  },
+
+  {
+    title: "iTero.com — Site Rebuild",
+    description:
+      "Led the full rebuild of Align's public site for its iTero intraoral scanners. Built the Contentful-driven page system that lets marketers assemble pages without a developer, Salesforce-backed lead forms, and an S3 media pipeline. The rebuilt site served 1.4M views to 650K unique users in its first year post-launch.",
+    image: "/images/itero-com.jpg",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "SCSS Modules",
+      "Mantine",
+      "Contentful",
+      "Salesforce API",
+    ],
+    visit: "https://www.itero.com",
+    id: 1,
+  },
+
+  {
+    title: "Align X-Ray Insights",
+    description:
+      "Product site for Align's AI-powered dental diagnostics platform, built on the same Next.js and Contentful foundation as iTero.com. I built the request-a-demo funnel end to end — form UX, validation, and a Salesforce integration that routes leads to sales in real time — plus the S3-backed media pipeline for the product's imagery.",
+    image: "/images/align-x-ray-insights.jpg",
+    tags: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "SCSS Modules",
+      "Mantine",
+      "Contentful",
+      "Salesforce API",
+    ],
+    visit: "https://www.alignxrayinsights.com",
+    id: 2,
+  },
+
+  {
+    title: "Internal CMS Platform",
+    description:
+      "Full-stack internal content platform used by Align's editorial team to manage marketing content across markets and locales. React and React Query on the front end, Node/Express with PostgreSQL and S3 behind it. Rewriting the heaviest content queries cut editor wait time by 60%, with unit and integration test coverage throughout.",
+    placeholder: "cms",
+    tags: [
+      "React",
+      "React Query",
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "AWS S3",
+      "Jest + RTL",
+    ],
+    id: 3,
+  },
+
   {
     title: "Real Estate Searcher App",
     description:
@@ -17,7 +91,7 @@ export const projects: IProject[] = [
     tags: ["React JS", "Next JS", "Chakra UI", "Rest API"],
     source: "https://github.com/gitMike23/real-estate-app_react_next",
     visit: "https://medovnik-real-estate.netlify.app/",
-    id: 0,
+    id: 4,
   },
   {
     title: "Recipes",
@@ -27,7 +101,7 @@ export const projects: IProject[] = [
     tags: ["React", "React Routing", "JavaScript", "Rest API"],
     source: "https://github.com/gitMike23/Recipe-app__react",
     visit: "https://frolicking-phoenix-abcebd.netlify.app/",
-    id: 1,
+    id: 5,
   },
   {
     title: "Design conference",
@@ -37,8 +111,9 @@ export const projects: IProject[] = [
     tags: ["Javascript"],
     source: "https://github.com/gitMike23/Design_conference",
     visit: "https://medovnik-conference.netlify.app/",
-    id: 2,
+    id: 6,
   },
+
   {
     title: "Color palette",
     description:
@@ -47,7 +122,7 @@ export const projects: IProject[] = [
     tags: ["Javascript"],
     source: "https://github.com/gitMike23/Color_palette_web_app",
     visit: "https://medovnik-palette.netlify.app/",
-    id: 3,
+    id: 7,
   },
   {
     title: "Photon",
@@ -57,7 +132,7 @@ export const projects: IProject[] = [
     tags: ["Javascript", "Rest API"],
     source: "https://github.com/gitMike23/Photon",
     visit: "https://medovnik-photon.netlify.app/",
-    id: 4,
+    id: 8,
   },
   {
     title: "Calculator",
@@ -65,9 +140,8 @@ export const projects: IProject[] = [
       "This app provides a seamless user experience, with lightning-fast calculations and intuitive interface. With its advanced features, you can perform complex calculations with ease, including addition, subtraction, multiplication, and division.",
     image: "/images/calculator.png",
     tags: ["React js", "useReducer"],
-    source: "#",
     visit: "https://medovnik-calculator.netlify.app/",
-    id: 5,
+    id: 9,
   },
 ];
 
@@ -77,15 +151,29 @@ export interface ITimelineEntry {
 }
 
 export const TimeLineData: ITimelineEntry[] = [
-  { year: 2019, text: "Started my journey as frontend developer" },
+  {
+    year: 2019,
+    text: "Started my frontend journey — first sites, first JavaScript",
+  },
   {
     year: 2020,
-    text: "Worked as a contractor for a web studio creating landing pages",
+    text: "Joined Auriga as a frontend developer on client projects",
   },
-  { year: 2021, text: "Became a Software Engineer at Auriga, Inc" },
+  {
+    year: 2021,
+    text: "Promoted to Middle in under a year; built a shared component library",
+  },
   {
     year: 2022,
-    text: "Joined a brilliant team as frontend developer at Align Technology",
+    text: "Joined Align Technology and led the full rebuild of itero.com",
+  },
+  {
+    year: 2025,
+    text: "Shipped Align X-Ray Insights, Align's AI-powered dental diagnostics site",
+  },
+  {
+    year: 2025,
+    text: "Became a Senior Frontend Engineer at Stoloto, building high-load lottery games",
   },
 ];
 
@@ -98,7 +186,7 @@ export interface IPrivateData {
 
 export const privateData: IPrivateData = {
   linkedIn: "https://www.linkedin.com/in/mikhail-medovnik/",
-  github: "https://github.com/gitmike23",
+  github: "https://github.com/mikhail-medovnik",
   telegram: "https://t.me/medovnik",
   email: "medovnikfl@gmail.com",
 };

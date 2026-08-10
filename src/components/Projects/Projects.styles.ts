@@ -12,6 +12,33 @@ export const ImgWrapper = styled.div`
   overflow: hidden;
 `;
 
+export const PlaceholderThumb = styled.div`
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  background: linear-gradient(
+    135deg,
+    ${({ theme }) => theme.colors.background2} 0%,
+    ${({ theme }) => theme.colors.background1} 100%
+  );
+  color: ${({ theme }) => theme.colors.accent1};
+`;
+
+export const PlaceholderLabel = styled.span`
+  font-size: 1.3rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+`;
+
+export const StackBlock = styled.div<{ $last?: boolean }>`
+  padding-bottom: ${({ $last }) => ($last ? "2.5rem" : "0")};
+`;
+
 export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -99,7 +126,9 @@ export const ExternalLink = styled.a`
 
 export const TagList = styled.ul`
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.8rem 1.6rem;
   padding: 2rem;
 `;
 
